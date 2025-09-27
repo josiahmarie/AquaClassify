@@ -1,0 +1,77 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #edf0f2;
+  color: #222;
+}
+/* Center About heading below navbar */
+.about-heading {
+  text-align: center;
+}
+
+.about-heading h1 {
+  font-size: 3rem;
+  color: #00c2d4;
+  letter-spacing: 1px;
+  margin: 0; /* remove extra space */
+  padding-bottom: -90px; /* optional: small spacing if needed */
+}
+
+
+/* Main about section layout */
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 90px 0px 90px; /* top | right | bottom | left */
+}
+
+
+.about-left {
+  width: 45%;
+  margin-top: auto; /* pushes left column to bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.about-left-text p {
+  font-size: 1.4rem;
+}
+
+.cyan-underline {
+  border: 2px solid #00c2d4;
+  width: 150px;
+  margin: 15px 0;
+}
+
+.about-left-logo {
+  display: flex;
+  align-items: center;
+}
+
+.about-left-logo img {
+  width: 80px;
+}
+
+.about-left-logo h1 {
+  font-size: 2rem;
+  color: #00c2d4;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+}
+
+.about-right {
+  width: 45%;
+}
+
+.about-right-text {
+  font-size: 1.4rem; /* larger text */
+  margin-bottom: 20px;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

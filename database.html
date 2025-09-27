@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCTV Database</title>
+    <link rel="stylesheet" href="css/nav-black.css">
+    <link rel="stylesheet" href="css/database.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <h1><span class="highlight">quaClassif</span>EYE</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="database.html">DATABASE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- First Section - CCTV Video -->
+    <section class="video-section">
+        <div class="video-container">
+            <div class="cctv-dropdown">
+                <select id="cctvSelect">
+                    <option value="cctv1">CCTV 1</option>
+                    <option value="cctv2">CCTV 2</option>
+                    <option value="cctv3">CCTV 3</option>
+                    <option value="cctv4">CCTV 4</option>
+                    <option value="cctv5">CCTV 5</option>
+                    <option value="cctv6">CCTV 6</option>
+                </select>
+            </div>
+            <div class="video-player">
+                <div id="cctvDisplay" class="cctv-display">
+                    <img id="cctvImage" src="https://via.placeholder.com/800x450/333333/ffffff?text=CCTV+1+Feed" alt="CCTV Feed">
+                </div>
+                <div class="fullscreen-btn" onclick="toggleFullscreen()">⛶</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Section - Data Analytics -->
+    <section class="data-section">
+        <div class="data-container">
+            <h2>Analytics Database</h2>
+            
+            <!-- Monthly Data Folders -->
+            <div class="month-folder" data-month="march">
+                <div class="folder-header" onclick="toggleFolder('march')">
+                    <span>March - 2025</span>
+                    <div class="header-right">
+                        <span class="view-text">View</span>
+                        <span class="folder-icon">▼</span>
+                    </div>
+                </div>
+                <div class="folder-content">
+                    <h3 class="data-title">MARCH 2025 Data</h3>
+                    <div class="excel-table">
+                        <table id="marchTable">
+                            <thead>
+                                <tr>
+                                    <th>Waste Type</th>
+                                    <th>Area 1</th>
+                                    <th>Area 2</th>
+                                    <th>Area 3</th>
+                                    <th>Area 4</th>
+                                    <th>Area 5</th>
+                                    <th>Totals</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="marchChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="month-folder" data-month="february">
+                <div class="folder-header" onclick="toggleFolder('february')">
+                    <span>February - 2025</span>
+                    <div class="header-right">
+                        <span class="view-text">View</span>
+                        <span class="folder-icon">▼</span>
+                    </div>
+                </div>
+                <div class="folder-content">
+                    <h3 class="data-title">FEBRUARY 2025 Data</h3>
+                    <div class="excel-table">
+                        <table id="februaryTable">
+                            <thead>
+                                <tr>
+                                    <th>Waste Type</th>
+                                    <th>Area 1</th>
+                                    <th>Area 2</th>
+                                    <th>Area 3</th>
+                                    <th>Area 4</th>
+                                    <th>Area 5</th>
+                                    <th>Totals</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="februaryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="month-folder" data-month="january">
+                <div class="folder-header" onclick="toggleFolder('january')">
+                    <span>January - 2025</span>
+                    <div class="header-right">
+                        <span class="view-text">View</span>
+                        <span class="folder-icon">▼</span>
+                    </div>
+                </div>
+                <div class="folder-content">
+                    <h3 class="data-title">JANUARY 2025 Data</h3>
+                    <div class="excel-table">
+                        <table id="januaryTable">
+                            <thead>
+                                <tr>
+                                    <th>Waste Type</th>
+                                    <th>Area 1</th>
+                                    <th>Area 2</th>
+                                    <th>Area 3</th>
+                                    <th>Area 4</th>
+                                    <th>Area 5</th>
+                                    <th>Totals</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="januaryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="js/database.js"></script>
+</body>
+</html>

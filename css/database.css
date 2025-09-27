@@ -1,0 +1,324 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* First Section - Video Section */
+.video-section {
+    background-color: #edf0f2;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.cctv-dropdown {
+    margin-bottom: 30px;
+}
+
+.cctv-dropdown select {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: white;
+    min-width: 300px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cctv-dropdown select:hover {
+    border-color: #007bff;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+
+.cctv-dropdown select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.video-player {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.cctv-display {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cctv-display img {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.fullscreen-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.fullscreen-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Second Section - Data Section */
+.data-section {
+    background-color: cyan;
+    min-height: 100vh;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+.data-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.data-container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Month Folders */
+.month-folder {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.month-folder:hover {
+    transform: translateY(-2px);
+}
+
+.folder-header {
+    background-color: #333;
+    color: white;
+    padding: 20px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.folder-header:hover {
+    background-color: #555;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.view-text {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.folder-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.folder-icon.rotated {
+    transform: rotate(180deg);
+}
+
+.folder-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.folder-content.open {
+    max-height: 1000px;
+    padding: 30px;
+}
+
+/* Data Title */
+.data-title {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 5px solid #4CAF50;
+}
+
+/* Excel Table Styles */
+.excel-table {
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.excel-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.excel-table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.excel-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.excel-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.excel-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.excel-table tbody tr:last-child {
+    background-color: #e8f5e8;
+    font-weight: bold;
+    border-top: 2px solid #4CAF50;
+}
+
+.excel-table tbody tr:last-child td {
+    font-weight: bold;
+}
+
+/* Status column styling */
+.status-resolved {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.status-investigating {
+    background-color: #cce7ff;
+    color: #004085;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Chart Container */
+.chart-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-player {
+        margin: 0 10px;
+    }
+    
+    .cctv-dropdown select {
+        min-width: 250px;
+        font-size: 14px;
+    }
+    
+    .data-container h2 {
+        font-size: 2rem;
+    }
+    
+    .folder-header {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+    
+    .excel-table {
+        font-size: 0.9rem;
+    }
+    
+    .excel-table th,
+    .excel-table td {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-section,
+    .data-section {
+        padding: 20px 10px;
+    }
+    
+    .cctv-dropdown select {
+        min-width: 200px;
+    }
+    
+    .folder-content.open {
+        padding: 20px 15px;
+    }
+}

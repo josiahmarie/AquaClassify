@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #00c2d4;
+  background: url("../img/background1.png") no-repeat center center/cover;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;   /* important */
+}
+.contact-widget {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: rgba(0, 194, 212, 0.1); /* semi-transparent cyan */
+  padding: 15px 20px;
+  border-radius: 15px;
+  text-align: right;
+  color: #00c2d4;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.contact-info h2,
+.contact-info h4 {
+  margin: 0;          /* remove default header margins */
+  font-weight: normal; /* optional: h2/h4 is bold by default */
+}
+
+.contact-info h2 {
+  font-size: 1.7rem;    /* shrink size */
+  font-weight: bold;
+}
+
+.contact-info h4 {
+  font-size: 1.3rem; /* smaller than h2 */
+}
+
+
+.contact-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.contact-buttons a.fa {
+  border: 2px solid #00c2d4;
+  text-decoration: none;
+  color: #00c2d4;
+  width: 45px;           /* fixed width */
+  height: 45px;          /* fixed height */
+  line-height: 45px;     /* vertically center icon */
+  border-radius: 50%;    /* perfect circle */
+  text-align: center;
+  font-size: 1.5rem;     /* icon size */
+  transition: all 0.3s;
+  display: inline-block;
+  font-family: FontAwesome; /* ensure FA font applied */
+}
+
+.contact-buttons a.fa:hover {
+  background: #00c2d4;
+  color: #000;
+}
+
